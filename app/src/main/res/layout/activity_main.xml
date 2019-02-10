@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="64dp"
+    android:paddingBottom="64dp"
+    android:paddingLeft="64dp"
+    android:paddingRight="64dp"
+    tools:context=".MainActivity">
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select course"
+        android:id="@+id/Auto"
+        android:completionThreshold="1"
+        android:dropDownAnchor="@id/cn"
+        android:completionHint="Select course"
+        android:popupBackground="@color/colorAccent"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cn"
+        android:layout_below="@id/Auto"
+        android:paddingBottom="20dp"
+        android:text=""
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cn"
+        android:id="@+id/gn"
+        android:text="Get Name"
+
+        />
+
+    <RadioGroup
+        android:id="@+id/Radio_group"
+        android:layout_width="222dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="19dp"
+        android:layout_below="@id/gn">
+
+        <RadioButton
+            android:id="@+id/radio_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:checked="true"
+            android:onClick="checkButton"
+            android:text="Chill" />
+
+        <RadioButton
+            android:id="@+id/radio_two"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:onClick="checkButton"
+            android:text="Fighter" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/view_selected"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Radio_group"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="20dp"
+        android:text="Your Selection: " />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_below="@id/view_selected"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="23dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_below="@id/button"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="23dp"
+        android:text="switch"
+        android:onClick="switchp"
+        />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_below="@id/button3"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="23dp"
+        android:text="Data"
+        android:onClick="feedit"/>
+
+
+</RelativeLayout>
